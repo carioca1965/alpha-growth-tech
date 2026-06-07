@@ -34,7 +34,9 @@ header{
     top:0;
     z-index:1000;
     background:rgba(0,0,0,.95);
-    backdrop-filter:blur(10px);
+    
+    /* backdrop-filter:blur(10px);/* fallback para navegadores sem suporte */
+    
     border-bottom:1px solid rgba(212,175,55,.1);
 }
 
