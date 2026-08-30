@@ -30,4 +30,9 @@
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
+    <url>
+        <loc>https://alpha-growth-tech.vercel.app/blog/por-que-treinar-time-ciberseguranca.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
 </urlset>

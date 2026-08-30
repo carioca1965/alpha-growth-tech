@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Por que sua empresa deveria treinar o time em cybersegurança — o elo mais fraco não é a tecnologia, é a falta de preparo das pessoas.">
+    <meta name="author" content="Alpha Growth Tech">
+    <link rel="canonical" href="https://alpha-growth-tech.vercel.app/blog/por-que-treinar-time-ciberseguranca.html">
+    <link rel="icon" href="../assets/logo.png" type="image/png">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://alpha-growth-tech.vercel.app/blog/por-que-treinar-time-ciberseguranca.html">
+    <meta property="og:title" content="Por Que Sua Empresa Deveria Treinar o Time em Cybersegurança | Alpha Growth Tech">
+    <meta property="og:description" content="A maioria dos incidentes de segurança começa com uma pessoa, não com uma falha técnica. Veja por que treinamento é tão importante quanto firewall.">
+    <meta property="og:image" content="https://alpha-growth-tech.vercel.app/assets/logo.png">
+    <meta property="og:locale" content="pt_BR">
+
+    <title>Por Que Sua Empresa Deveria Treinar o Time em Cybersegurança | Alpha Growth Tech</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog-article.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header">
+        <div class="container nav">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img src="../assets/logo.png" alt="Alpha Growth Tech - Logo" loading="lazy" width="200" height="80">
+                </a>
+            </div>
+
+            <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="main-nav">
+                <a href="../index.html#sobre">Sobre</a>
+                <a href="../index.html#servicos">Serviços</a>
+                <a href="../blog.html">Blog</a>
+                <a href="../index.html#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <article class="article container">
+        <div class="breadcrumb">
+            <a href="../blog.html">← Voltar para o Blog</a>
+        </div>
+
+        <h1>Por Que Sua Empresa Deveria Treinar o Time em Cybersegurança</h1>
+        <p class="meta">Cybersegurança • Alpha Growth Tech</p>
+
+        <p>
+            Empresas investem em firewall, criptografia, backups e testes de
+            invasão — e isso é essencial. Mas uma pesquisa recorrente no setor
+            de segurança da informação aponta sempre para o mesmo ponto: a
+            maioria dos incidentes graves começa com uma ação humana, não com
+            uma falha puramente técnica. Um clique num link malicioso, uma
+            senha fraca reutilizada, um anexo aberto sem checar o remetente.
+        </p>
+
+        <h2>O elo mais fraco não é o sistema, é a rotina</h2>
+        <p>
+            Um firewall bem configurado não impede um funcionário de informar
+            a própria senha para alguém se passando por suporte técnico. Esse
+            tipo de ataque, chamado de engenharia social, é um dos mais
+            eficazes justamente porque contorna toda a proteção técnica —
+            explora a confiança e a falta de preparo das pessoas.
+        </p>
+
+        <h2>O que um treinamento de verdade ensina</h2>
+        <ul>
+            <li>Reconhecer e-mails e mensagens de phishing antes de clicar</li>
+            <li>Criar e gerenciar senhas fortes sem depender só da memória</li>
+            <li>Identificar sinais de um golpe de engenharia social por telefone ou chat</li>
+            <li>Entender o que fazer (e quem avisar) ao suspeitar de um incidente</li>
+        </ul>
+
+        <h2>Não é só treinamento técnico, é mudança de cultura</h2>
+        <p>
+            Uma palestra ou treinamento pontual já ajuda a levantar a
+            consciência do time, mas o resultado mais forte aparece quando
+            segurança passa a ser tratada como parte da cultura da empresa —
+            algo que todo colaborador entende que é responsabilidade dele, não
+            só do time de TI.
+        </p>
+
+        <h2>O investimento é pequeno perto do risco</h2>
+        <p>
+            O custo de um treinamento de time é significativamente menor do
+            que o custo médio de um incidente de segurança — que envolve não
+            só perda financeira direta, mas também tempo de recuperação,
+            dano à reputação e possíveis implicações legais (como violações
+            da LGPD).
+        </p>
+
+        <div class="cta-box">
+            <h3>Quer levar essa conscientização para o seu time?</h3>
+            <p>A Alpha Growth Tech oferece palestras e treinamentos em cybersegurança personalizados para empresas.</p>
+            <a href="../index.html#contato" class="btn">Solicitar Palestra</a>
+        </div>
+    </article>
+
+    <footer id="footer">
+        <h2>Alpha Growth Tech</h2>
+        <p>contato@alphagrowthtech.com</p>
+        <p>Brasil • Estados Unidos • Europa</p>
+        <p>© 2026 Alpha Growth Tech</p>
+    </footer>
+
+    <a href="https://wa.me/5547988567547" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa no WhatsApp">
+        💬
+    </a>
+
+    <script>
+        (function () {
+            const menuBtn = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+
+            menuBtn.addEventListener('click', function () {
+                const isOpen = mainNav.classList.toggle('open');
+                menuBtn.classList.toggle('active', isOpen);
+                menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+
+            mainNav.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    mainNav.classList.remove('open');
+                    menuBtn.classList.remove('active');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
