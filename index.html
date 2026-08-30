@@ -1,9 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alpha Growth Tech - Desenvolvimento Back-end, QA, Cybersegurança e Marketing Digital para empresas do Brasil, Estados Unidos e Europa.">
+    <meta name="keywords" content="back-end, QA, cybersegurança, marketing digital, desenvolvimento de software">
+    <meta name="author" content="Alpha Growth Tech">
+    <link rel="canonical" href="https://alpha-growth-tech.vercel.app/">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+
+    <!-- Open Graph / Facebook, WhatsApp, LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alpha-growth-tech.vercel.app/">
+    <meta property="og:title" content="Alpha Growth Tech | Tecnologia, Segurança e Marketing">
+    <meta property="og:description" content="Desenvolvimento Back-end, QA, Cybersegurança e Marketing Digital para empresas do Brasil, Estados Unidos e Europa.">
+    <meta property="og:image" content="https://alpha-growth-tech.vercel.app/assets/logo.png">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alpha Growth Tech | Tecnologia, Segurança e Marketing">
+    <meta name="twitter:description" content="Desenvolvimento Back-end, QA, Cybersegurança e Marketing Digital para empresas do Brasil, Estados Unidos e Europa.">
+    <meta name="twitter:image" content="https://alpha-growth-tech.vercel.app/assets/logo.png">
+
     <title>Alpha Growth Tech</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,15 +33,20 @@
     <header id="header">
         <div class="container nav">
             <div class="logo-container">
-                <img src="assets/logo.png" alt="Alpha Growth Tech" loading="lazy">
+                <img src="assets/logo.png" alt="Alpha Growth Tech - Logo" loading="lazy" width="200" height="80">
             </div>
 
-            <!-- Menu sempre visível -->
-            <nav>
-                <a href="#sobre">Sobre</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#socios">Sócios</a>
-                <a href="#contato">Contato</a>
+            <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="main-nav">
+                <a href="#sobre" data-pt="Sobre" data-en="About">Sobre</a>
+                <a href="#servicos" data-pt="Serviços" data-en="Services">Serviços</a>
+                <a href="#contato" data-pt="Contato" data-en="Contact">Contato</a>
+                <button id="lang-toggle" class="lang-btn" type="button" aria-label="Switch language">EN</button>
             </nav>
         </div>
     </header>
@@ -30,23 +54,23 @@
     <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
-            <h1>
+            <h1 data-pt="Tecnologia, Segurança e Marketing para <span>Impulsionar Resultados</span>" data-en="Technology, Security and Marketing to <span>Drive Results</span>">
                 Tecnologia, Segurança e Marketing para
                 <span>Impulsionar Resultados</span>
             </h1>
-            <p>
+            <p data-pt="Desenvolvimento Back-end, QA, Cybersegurança e Marketing Digital para empresas do Brasil, Estados Unidos e Europa." data-en="Back-end Development, QA, Cybersecurity and Digital Marketing for companies in Brazil, the United States and Europe.">
                 Desenvolvimento Back-end, QA, Cybersegurança e Marketing Digital
                 para empresas do Brasil, Estados Unidos e Europa.
             </p>
-            <a href="#contato" class="btn">Solicitar Orçamento</a>
+            <a href="#contato" class="btn" data-pt="Solicitar Orçamento" data-en="Request a Quote">Solicitar Orçamento</a>
         </div>
     </section>
 
     <!-- SOBRE -->
     <section id="sobre" class="section">
         <div class="container">
-            <h2>Quem Somos</h2>
-            <p>
+            <h2 data-pt="Quem Somos" data-en="Who We Are">Quem Somos</h2>
+            <p data-pt="A Alpha Growth Tech é especializada em Desenvolvimento de Software, Quality Assurance, Cybersegurança e Marketing Digital. Atuamos oferecendo soluções tecnológicas modernas para empresas que desejam crescer com segurança, performance e inovação." data-en="Alpha Growth Tech specializes in Software Development, Quality Assurance, Cybersecurity and Digital Marketing. We offer modern technology solutions for companies that want to grow with security, performance and innovation.">
                 A Alpha Growth Tech é especializada em Desenvolvimento de Software,
                 Quality Assurance, Cybersegurança e Marketing Digital.
                 Atuamos oferecendo soluções tecnológicas modernas para empresas
@@ -58,12 +82,24 @@
     <!-- ESTATÍSTICAS -->
     <section class="section stats">
         <div class="container">
-            <h2>Nossos Diferenciais</h2>
+            <h2 data-pt="Nossos Diferenciais" data-en="What Sets Us Apart">Nossos Diferenciais</h2>
             <div class="cards">
-                <div class="card"><h3>🌎 Atuação Internacional</h3><p>Brasil, Estados Unidos e Europa.</p></div>
-                <div class="card"><h3>🔒 Segurança</h3><p>Proteção de aplicações, dados e infraestrutura.</p></div>
-                <div class="card"><h3>⚡ Performance</h3><p>Sistemas rápidos, escaláveis e modernos.</p></div>
-                <div class="card"><h3>📈 Growth</h3><p>Marketing Digital orientado a resultados.</p></div>
+                <div class="card">
+                    <h3 data-pt="🌎 Atuação Internacional" data-en="🌎 Global Reach">🌎 Atuação Internacional</h3>
+                    <p data-pt="Brasil, Estados Unidos e Europa." data-en="Brazil, United States and Europe.">Brasil, Estados Unidos e Europa.</p>
+                </div>
+                <div class="card">
+                    <h3 data-pt="🔒 Segurança" data-en="🔒 Security">🔒 Segurança</h3>
+                    <p data-pt="Proteção de aplicações, dados e infraestrutura." data-en="Protection for applications, data and infrastructure.">Proteção de aplicações, dados e infraestrutura.</p>
+                </div>
+                <div class="card">
+                    <h3 data-pt="⚡ Performance" data-en="⚡ Performance">⚡ Performance</h3>
+                    <p data-pt="Sistemas rápidos, escaláveis e modernos." data-en="Fast, scalable and modern systems.">Sistemas rápidos, escaláveis e modernos.</p>
+                </div>
+                <div class="card">
+                    <h3 data-pt="📈 Growth" data-en="📈 Growth">📈 Growth</h3>
+                    <p data-pt="Marketing Digital orientado a resultados." data-en="Results-driven Digital Marketing.">Marketing Digital orientado a resultados.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -71,23 +107,24 @@
     <!-- SERVIÇOS -->
     <section id="servicos" class="section">
         <div class="container">
-            <h2>Nossos Serviços</h2>
+            <h2 data-pt="Nossos Serviços" data-en="Our Services">Nossos Serviços</h2>
             <div class="cards">
-                <div class="card"><h3>💻 Desenvolvimento Back-end</h3><p>APIs REST, Node.js, TypeScript, integrações e arquitetura escalável.</p></div>
-                <div class="card"><h3>🔍 Quality Assurance</h3><p>Automação de testes com Cypress, Postman, JMeter e validação contínua.</p></div>
-                <div class="card"><h3>🛡 Cybersegurança</h3><p>Análise de vulnerabilidades, proteção de aplicações e boas práticas.</p></div>
-                <div class="card"><h3>📈 Marketing Digital</h3><p>SEO, Google Ads, Meta Ads e estratégias de crescimento.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SÓCIOS -->
-    <section id="socios" class="section">
-        <div class="container">
-            <h2>Sócios Fundadores</h2>
-            <div class="cards">
-                <div class="card"><h3>Carlos Eduardo Pereira Pedroza</h3><p>CTO • Desenvolvimento Back-end, QA e Cybersegurança</p></div>
-                <div class="card"><h3>Flávio Lapa</h3><p>CMO • Marketing Digital, Estratégia e Growth</p></div>
+                <div class="card">
+                    <h3 data-pt="💻 Desenvolvimento Back-end" data-en="💻 Back-end Development">💻 Desenvolvimento Back-end</h3>
+                    <p data-pt="APIs REST, Node.js, TypeScript, integrações e arquitetura escalável." data-en="REST APIs, Node.js, TypeScript, integrations and scalable architecture.">APIs REST, Node.js, TypeScript, integrações e arquitetura escalável.</p>
+                </div>
+                <div class="card">
+                    <h3 data-pt="🔍 Quality Assurance" data-en="🔍 Quality Assurance">🔍 Quality Assurance</h3>
+                    <p data-pt="Automação de testes com Cypress, Postman, JMeter e validação contínua." data-en="Test automation with Cypress, Postman, JMeter and continuous validation.">Automação de testes com Cypress, Postman, JMeter e validação contínua.</p>
+                </div>
+                <div class="card">
+                    <h3 data-pt="🛡 Cybersegurança" data-en="🛡 Cybersecurity">🛡 Cybersegurança</h3>
+                    <p data-pt="Análise de vulnerabilidades, proteção de aplicações e boas práticas." data-en="Vulnerability assessment, application protection and best practices.">Análise de vulnerabilidades, proteção de aplicações e boas práticas.</p>
+                </div>
+                <div class="card">
+                    <h3 data-pt="📈 Marketing Digital" data-en="📈 Digital Marketing">📈 Marketing Digital</h3>
+                    <p data-pt="SEO, Google Ads, Meta Ads e estratégias de crescimento." data-en="SEO, Google Ads, Meta Ads and growth strategies.">SEO, Google Ads, Meta Ads e estratégias de crescimento.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -95,20 +132,20 @@
     <!-- CONTATO -->
     <section id="contato" class="section">
         <div class="container">
-            <h2>Solicite um Orçamento</h2>
+            <h2 data-pt="Solicite um Orçamento" data-en="Request a Quote">Solicite um Orçamento</h2>
             <form class="contact-form" action="https://formsubmit.co/contato@alphagrowthtech.com" method="POST">
-                <input type="text" name="nome" placeholder="Nome" required>
-                <input type="email" name="email" placeholder="E-mail" required>
-                <input type="text" name="empresa" placeholder="Empresa">
-                <select name="servico">
-                    <option>Selecione um Serviço</option>
-                    <option>Back-end</option>
-                    <option>QA</option>
-                    <option>Cybersegurança</option>
-                    <option>Marketing Digital</option>
+                <input type="text" name="nome" data-pt-placeholder="Nome" data-en-placeholder="Name" placeholder="Nome" required>
+                <input type="email" name="email" data-pt-placeholder="E-mail" data-en-placeholder="Email" placeholder="E-mail" required>
+                <input type="text" name="empresa" data-pt-placeholder="Empresa" data-en-placeholder="Company" placeholder="Empresa">
+                <select name="servico" required>
+                    <option value="" data-pt="Selecione um Serviço" data-en="Select a Service">Selecione um Serviço</option>
+                    <option data-pt="Back-end" data-en="Back-end">Back-end</option>
+                    <option data-pt="QA" data-en="QA">QA</option>
+                    <option data-pt="Cybersegurança" data-en="Cybersecurity">Cybersegurança</option>
+                    <option data-pt="Marketing Digital" data-en="Digital Marketing">Marketing Digital</option>
                 </select>
-                <textarea name="mensagem" placeholder="Descreva seu projeto"></textarea>
-                <button type="submit" class="btn">Enviar Solicitação</button>
+                <textarea name="mensagem" data-pt-placeholder="Descreva seu projeto" data-en-placeholder="Describe your project" placeholder="Descreva seu projeto"></textarea>
+                <button type="submit" class="btn" data-pt="Enviar Solicitação" data-en="Send Request">Enviar Solicitação</button>
             </form>
         </div>
     </section>
@@ -117,15 +154,65 @@
     <footer id="footer">
         <h2>Alpha Growth Tech</h2>
         <p>contato@alphagrowthtech.com</p>
-        <p>Brasil • Estados Unidos • Europa</p>
+        <p data-pt="Brasil • Estados Unidos • Europa" data-en="Brazil • United States • Europe">Brasil • Estados Unidos • Europa</p>
         <p>© 2026 Alpha Growth Tech</p>
     </footer>
 
     <!-- WHATSAPP -->
-    <a href="https://wa.me/55525252525" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa no WhatsApp">
+    <a href="https://wa.me/5547988567547" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa no WhatsApp">
         💬
     </a>
 
-    <!-- Sem script para menu -->
+    <script>
+        (function () {
+            const menuBtn = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+
+            menuBtn.addEventListener('click', function () {
+                const isOpen = mainNav.classList.toggle('open');
+                menuBtn.classList.toggle('active', isOpen);
+                menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+
+            mainNav.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    mainNav.classList.remove('open');
+                    menuBtn.classList.remove('active');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+        })();
+
+        (function () {
+            const toggleBtn = document.getElementById('lang-toggle');
+            let currentLang = localStorage.getItem('agt-lang') || 'pt';
+
+            function applyLang(lang) {
+                document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
+
+                document.querySelectorAll('[data-pt]').forEach(el => {
+                    const text = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-pt');
+                    if (text !== null) el.innerHTML = text;
+                });
+
+                document.querySelectorAll('[data-pt-placeholder]').forEach(el => {
+                    const text = lang === 'en'
+                        ? el.getAttribute('data-en-placeholder')
+                        : el.getAttribute('data-pt-placeholder');
+                    if (text !== null) el.setAttribute('placeholder', text);
+                });
+
+                toggleBtn.textContent = lang === 'en' ? 'PT' : 'EN';
+                localStorage.setItem('agt-lang', lang);
+                currentLang = lang;
+            }
+
+            toggleBtn.addEventListener('click', function () {
+                applyLang(currentLang === 'en' ? 'pt' : 'en');
+            });
+
+            applyLang(currentLang);
+        })();
+    </script>
 </body>
 </html>

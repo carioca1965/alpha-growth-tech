@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alpha-growth-tech.vercel.app/sitemap.xml
