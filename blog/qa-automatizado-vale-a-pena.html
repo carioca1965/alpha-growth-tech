@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QA Automatizado: quando vale a pena investir em automação de testes no seu projeto.">
+    <meta name="author" content="Alpha Growth Tech">
+    <link rel="canonical" href="https://alpha-growth-tech.vercel.app/blog/qa-automatizado-vale-a-pena.html">
+    <link rel="icon" href="../assets/logo.png" type="image/png">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://alpha-growth-tech.vercel.app/blog/qa-automatizado-vale-a-pena.html">
+    <meta property="og:title" content="QA Automatizado: Quando Vale a Pena? | Alpha Growth Tech">
+    <meta property="og:description" content="Nem todo projeto precisa de automação de testes no dia 1. Veja como decidir o momento certo.">
+    <meta property="og:image" content="https://alpha-growth-tech.vercel.app/assets/logo.png">
+    <meta property="og:locale" content="pt_BR">
+
+    <title>QA Automatizado: Quando Vale a Pena? | Alpha Growth Tech</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog-article.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header">
+        <div class="container nav">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img src="../assets/logo.png" alt="Alpha Growth Tech - Logo" loading="lazy" width="200" height="80">
+                </a>
+            </div>
+
+            <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="main-nav">
+                <a href="../index.html#sobre">Sobre</a>
+                <a href="../index.html#servicos">Serviços</a>
+                <a href="../blog.html">Blog</a>
+                <a href="../index.html#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <article class="article container">
+        <div class="breadcrumb">
+            <a href="../blog.html">← Voltar para o Blog</a>
+        </div>
+
+        <h1>QA Automatizado: Quando Vale a Pena?</h1>
+        <p class="meta">Quality Assurance • Alpha Growth Tech</p>
+
+        <p>
+            Uma dúvida comum entre founders e gestores de produto: "já devemos
+            automatizar os testes?" A resposta não é sempre sim — automação tem
+            custo de implementação e manutenção, e em alguns momentos do projeto
+            testes manuais bem conduzidos são mais eficientes.
+        </p>
+
+        <h2>Quando testes manuais ainda fazem sentido</h2>
+        <p>
+            Em produtos muito novos, com a interface e as regras de negócio mudando
+            toda semana, automatizar testes pode significar reescrever os scripts
+            constantemente — um retrabalho caro. Nesse estágio, um QA manual
+            experiente, testando exploratoriamente, costuma trazer mais valor.
+        </p>
+
+        <h2>Sinais de que é hora de automatizar</h2>
+        <ul>
+            <li>O produto já tem fluxos estáveis que se repetem a cada release</li>
+            <li>O time faz deploys frequentes (semanais ou diários)</li>
+            <li>Bugs de regressão (coisas que já funcionavam e voltaram a quebrar) estão aparecendo com frequência</li>
+            <li>O time de QA manual não dá mais conta do volume de testes necessário a cada entrega</li>
+        </ul>
+
+        <h2>Por onde começar</h2>
+        <p>
+            Não é preciso automatizar tudo de uma vez. A abordagem mais eficiente é
+            priorizar os fluxos críticos do negócio primeiro — login, checkout,
+            cadastro, pagamento — e expandir a cobertura aos poucos. Ferramentas
+            como Cypress (para testes de interface) e Postman/JMeter (para APIs e
+            performance) cobrem a maior parte das necessidades sem exigir uma
+            infraestrutura complexa.
+        </p>
+
+        <h2>O equilíbrio ideal</h2>
+        <p>
+            Na prática, os times mais maduros combinam os dois mundos: automação
+            para os fluxos repetitivos e críticos, e testes manuais/exploratórios
+            para validar experiência do usuário, casos extremos e novas
+            funcionalidades antes que virem regra.
+        </p>
+
+        <div class="cta-box">
+            <h3>Quer avaliar a maturidade de QA do seu produto?</h3>
+            <p>A Alpha Growth Tech ajuda a estruturar estratégias de teste sob medida para o momento do seu projeto.</p>
+            <a href="../index.html#contato" class="btn">Falar com a Equipe</a>
+        </div>
+    </article>
+
+    <footer id="footer">
+        <h2>Alpha Growth Tech</h2>
+        <p>contato@alphagrowthtech.com</p>
+        <p>Brasil • Estados Unidos • Europa</p>
+        <p>© 2026 Alpha Growth Tech</p>
+    </footer>
+
+    <a href="https://wa.me/5547988567547" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa no WhatsApp">
+        💬
+    </a>
+
+    <script>
+        (function () {
+            const menuBtn = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+
+            menuBtn.addEventListener('click', function () {
+                const isOpen = mainNav.classList.toggle('open');
+                menuBtn.classList.toggle('active', isOpen);
+                menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+
+            mainNav.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    mainNav.classList.remove('open');
+                    menuBtn.classList.remove('active');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

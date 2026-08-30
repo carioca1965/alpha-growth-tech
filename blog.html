@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog da Alpha Growth Tech - artigos sobre Back-end, QA, Cybersegurança e Marketing Digital.">
+    <meta name="author" content="Alpha Growth Tech">
+    <link rel="canonical" href="https://alpha-growth-tech.vercel.app/blog.html">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alpha-growth-tech.vercel.app/blog.html">
+    <meta property="og:title" content="Blog | Alpha Growth Tech">
+    <meta property="og:description" content="Artigos sobre Back-end, QA, Cybersegurança e Marketing Digital para empresas que querem crescer com segurança.">
+    <meta property="og:image" content="https://alpha-growth-tech.vercel.app/assets/logo.png">
+    <meta property="og:locale" content="pt_BR">
+
+    <title>Blog | Alpha Growth Tech</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container nav">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="assets/logo.png" alt="Alpha Growth Tech - Logo" loading="lazy" width="200" height="80">
+                </a>
+            </div>
+
+            <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="main-nav">
+                <a href="index.html#sobre">Sobre</a>
+                <a href="index.html#servicos">Serviços</a>
+                <a href="blog.html">Blog</a>
+                <a href="index.html#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO DO BLOG -->
+    <section class="section" style="padding-top:160px;padding-bottom:60px;">
+        <div class="container">
+            <h2 style="text-align:center;">Blog</h2>
+            <p style="text-align:center;max-width:700px;margin:0 auto;opacity:.85;">
+                Conteúdo sobre Back-end, QA, Cybersegurança e Marketing Digital
+                para empresas que querem crescer com segurança e performance.
+            </p>
+        </div>
+    </section>
+
+    <!-- LISTA DE ARTIGOS -->
+    <section class="section" style="padding-top:0;">
+        <div class="container">
+            <div class="cards">
+
+                <a href="blog/checklist-seguranca-apis.html" class="card" style="text-decoration:none;color:inherit;display:block;">
+                    <h3>🛡 Checklist de Segurança para APIs REST</h3>
+                    <p>Os 7 pontos mais comuns de vulnerabilidade em APIs — e como corrigi-los antes que virem incidente.</p>
+                </a>
+
+                <a href="blog/qa-automatizado-vale-a-pena.html" class="card" style="text-decoration:none;color:inherit;display:block;">
+                    <h3>🔍 QA Automatizado: Quando Vale a Pena?</h3>
+                    <p>Nem todo projeto precisa de automação de testes no dia 1. Veja como decidir o momento certo.</p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <h2>Alpha Growth Tech</h2>
+        <p>contato@alphagrowthtech.com</p>
+        <p>Brasil • Estados Unidos • Europa</p>
+        <p>© 2026 Alpha Growth Tech</p>
+    </footer>
+
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/5547988567547" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa no WhatsApp">
+        💬
+    </a>
+
+    <script>
+        (function () {
+            const menuBtn = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+
+            menuBtn.addEventListener('click', function () {
+                const isOpen = mainNav.classList.toggle('open');
+                menuBtn.classList.toggle('active', isOpen);
+                menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+
+            mainNav.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    mainNav.classList.remove('open');
+                    menuBtn.classList.remove('active');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
