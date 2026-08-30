@@ -20,4 +20,9 @@
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
+    <url>
+        <loc>https://alpha-growth-tech.vercel.app/blog/sinais-falha-seguranca-api.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
 </urlset>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="5 sinais práticos de que sua API tem uma falha de segurança grave — e o que fazer em cada caso.">
+    <meta name="author" content="Alpha Growth Tech">
+    <link rel="canonical" href="https://alpha-growth-tech.vercel.app/blog/sinais-falha-seguranca-api.html">
+    <link rel="icon" href="../assets/logo.png" type="image/png">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://alpha-growth-tech.vercel.app/blog/sinais-falha-seguranca-api.html">
+    <meta property="og:title" content="5 Sinais de que sua API Tem uma Falha de Segurança Grave | Alpha Growth Tech">
+    <meta property="og:description" content="Sinais práticos e observáveis de vulnerabilidade em APIs — e o que fazer ao identificar cada um.">
+    <meta property="og:image" content="https://alpha-growth-tech.vercel.app/assets/logo.png">
+    <meta property="og:locale" content="pt_BR">
+
+    <title>5 Sinais de que sua API Tem uma Falha de Segurança Grave | Alpha Growth Tech</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog-article.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header">
+        <div class="container nav">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img src="../assets/logo.png" alt="Alpha Growth Tech - Logo" loading="lazy" width="200" height="80">
+                </a>
+            </div>
+
+            <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="main-nav">
+                <a href="../index.html#sobre">Sobre</a>
+                <a href="../index.html#servicos">Serviços</a>
+                <a href="../blog.html">Blog</a>
+                <a href="../index.html#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <article class="article container">
+        <div class="breadcrumb">
+            <a href="../blog.html">← Voltar para o Blog</a>
+        </div>
+
+        <h1>5 Sinais de que sua API Tem uma Falha de Segurança Grave</h1>
+        <p class="meta">Cybersegurança • Alpha Growth Tech</p>
+
+        <p>
+            Nem toda vulnerabilidade grave em uma API é descoberta só em uma
+            auditoria formal. Muitas vezes, existem sinais práticos que já
+            aparecem no dia a dia da operação — e que, quando ignorados, se
+            transformam em incidentes de segurança sérios. Veja os 5 mais comuns.
+        </p>
+
+        <h2>1. A API responde diferente para requisições sem autenticação</h2>
+        <p>
+            Se um endpoint que deveria exigir login retorna dados parciais (ou
+            completos) mesmo sem token válido, isso é um sinal claro de falha de
+            controle de acesso — uma das vulnerabilidades mais exploradas em
+            APIs REST.
+        </p>
+
+        <h2>2. Mensagens de erro revelam detalhes técnicos internos</h2>
+        <p>
+            Erros que expõem stack traces, nomes de tabelas do banco de dados ou
+            versões de bibliotecas usadas dão a um atacante um mapa de como sua
+            aplicação funciona por dentro. Erros para o usuário final devem ser
+            genéricos; os detalhes técnicos devem ficar apenas nos logs internos.
+        </p>
+
+        <h2>3. Um usuário consegue acessar dados de outro usuário</h2>
+        <p>
+            Trocar o ID de um recurso na URL (ex: `/pedidos/123` para
+            `/pedidos/124`) e conseguir ver dados de outra pessoa é uma falha
+            clássica chamada IDOR (Insecure Direct Object Reference). É um dos
+            sinais mais graves e mais comuns em sistemas com crescimento rápido.
+        </p>
+
+        <h2>4. A API aceita volumes anormais de requisições sem bloqueio</h2>
+        <p>
+            Se é possível fazer milhares de tentativas de login ou de busca em
+            sequência sem qualquer bloqueio ou captcha, sua aplicação está aberta
+            para ataques de força bruta e scraping em massa.
+        </p>
+
+        <h2>5. Ninguém sabe dizer quando foi a última atualização de dependências</h2>
+        <p>
+            Esse sinal não aparece no comportamento da API, mas é igualmente
+            grave: se o time não tem visibilidade de quando as bibliotecas foram
+            atualizadas pela última vez, é provável que existam vulnerabilidades
+            conhecidas (CVEs) já documentadas publicamente esperando para serem
+            exploradas.
+        </p>
+
+        <h2>O que fazer a partir daqui</h2>
+        <p>
+            Identificar um ou mais desses sinais não significa pânico — significa
+            que chegou a hora de rodar uma auditoria de segurança estruturada,
+            priorizando as correções pelo risco real de cada uma. Ignorar esses
+            sinais, por outro lado, é o caminho mais comum para um incidente que
+            poderia ter sido evitado.
+        </p>
+
+        <div class="cta-box">
+            <h3>Identificou algum desses sinais na sua API?</h3>
+            <p>A Alpha Growth Tech realiza auditorias de segurança e ajuda a priorizar as correções que realmente importam.</p>
+            <a href="../index.html#contato" class="btn">Solicitar Auditoria</a>
+        </div>
+    </article>
+
+    <footer id="footer">
+        <h2>Alpha Growth Tech</h2>
+        <p>contato@alphagrowthtech.com</p>
+        <p>Brasil • Estados Unidos • Europa</p>
+        <p>© 2026 Alpha Growth Tech</p>
+    </footer>
+
+    <a href="https://wa.me/5547988567547" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa no WhatsApp">
+        💬
+    </a>
+
+    <script>
+        (function () {
+            const menuBtn = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+
+            menuBtn.addEventListener('click', function () {
+                const isOpen = mainNav.classList.toggle('open');
+                menuBtn.classList.toggle('active', isOpen);
+                menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+
+            mainNav.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    mainNav.classList.remove('open');
+                    menuBtn.classList.remove('active');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
